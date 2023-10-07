@@ -1,0 +1,45 @@
+import java.util.*;
+public class Assignment1_Q3 {
+	
+	static Scanner s = new Scanner(System.in);
+	static int foodMenu()
+	{ 
+		int choice;
+		System.out.println("0. Exit");
+		System.out.println("1. Dosa");
+		System.out.println("2. Idli");
+		System.out.println("3. Vadapav");
+		System.out.println("4. Bhel");
+		System.out.println("5. Generate Bill");
+		System.out.println("Enter Choice = ");
+		choice = s.nextInt();
+		return choice;
+		
+	}
+
+	public static void main(String[] args) {
+		
+		int choice,bill=0,count=0;
+		Scanner sc = new Scanner(System.in);
+		
+		
+		while((choice=foodMenu())!=0)
+		{
+			
+			switch(choice)
+			{
+			 case 1 : System.out.println("Enter count of Dosa : ");
+			 		  count = sc.nextInt();
+			 		  bill = bill + 30*count;
+			 case 2 :System.out.println("Enter count of Idli : ");
+	 		  		 count = sc.nextInt();
+	 		         bill = bill + 20*count;
+			 case3 : System.out.println("Bill = "+bill);
+			}
+		}
+		
+		
+
+	}
+
+}
