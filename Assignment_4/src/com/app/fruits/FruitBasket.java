@@ -59,9 +59,7 @@ class Fruit
 
 	public String Taste()
 	{
-		String str;
-		str = "no specific taste";
-		return str;
+		return "no specific taste";
 	}
 	public void accept()
 	{
@@ -108,9 +106,7 @@ class Apple extends Fruit
 	}
 	public String Taste()
 	{
-		String str;
-		str = "sweet n sour";
-		return str;
+		return "sweet n sour";
 	}
 	
 	
@@ -137,9 +133,8 @@ class Orange extends Fruit
 	}
 	public String Taste()
 	{
-		String str;
-		str = "sour";
-		return str;
+		
+		return "sour";
 	}
 	
 	
@@ -166,9 +161,7 @@ class Mango extends Fruit
 	}
 	public String Taste()
 	{
-		String str;
-		str = "sweet";
-		return str;
+		return "sweet";
 	}
 	
 }
@@ -286,6 +279,10 @@ public class FruitBasket
 						System.out.println("Wrong Index");
 					}
 				break;
+				
+//			case 8:
+//				 	String str;
+//				 	if(basket[i].Taste())
 				
 			default: System.out.println("Wrong choice!!!!");
 						break;
