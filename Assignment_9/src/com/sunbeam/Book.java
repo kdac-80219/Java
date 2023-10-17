@@ -67,5 +67,15 @@ public class Book {
 				+ "]";
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		Book b1 = (Book)obj;
+		if(this.isbn.equals(b1.isbn))
+		{
+			return true;
+		}
+		return super.equals(obj);
+	}
+	
 	
 }

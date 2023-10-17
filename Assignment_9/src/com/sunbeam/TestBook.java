@@ -25,19 +25,16 @@ public class TestBook {
 	public static void main(String[] args) {
 		
 		int choice=0;
-		Book b1 = new Book();
+		Book b;
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Book>BookList = new ArrayList<>();
 		
-		class SortAllBooks implements Comparator<Book>
-		{
-			
-		}
 		do{
 			switch(choice)
 			{
-			case 1:b1.accept(); 
-				   BookList.add(b1);
+			case 1:b = new Book();
+				   b.accept(); 
+				   BookList.add(b);
 				   break;
 			case 2: 
 				if(BookList.size()!=0)
@@ -58,21 +55,40 @@ public class TestBook {
 				System.out.println("Book successfully deleted!!!");
 				break;
 				
-			case 4: String isbn;
+			case 4: Book key = new Book();
+					String isbn;
 					System.out.println("Enter a isbn to search a book =");
 					isbn = sc.next();
-					if(BookList.contains(isbn))
+					key.setIsbn(isbn);
+					
+					if(BookList.contains(key))
 					{
 						System.out.println("Book is present!!!");
 					}
 					else
 						System.out.println("Book not present!!!");
 					break;
+					
 			case 5: BookList.clear();
 					break;
 			case 6:  System.out.println("Total Books = "+BookList.size());
 					break;
-			 
+			case 7:
+				class SortBook implements Comparator<Book>
+				{
+					public int compare(Book b1 , Book b2)
+					{
+						return -Double.compare(b1.getPrice(), b2.getPrice());
+					}
+				}
+				SortBook comparator = new SortBook();
+				BookList.sort(comparator);
+				for (Book element : BookList) {
+					System.out.println(element);
+				}
+				break;
+			default: System.out.println("Wrong Choice!!!!");
+			 	break;
 			}
 		}while((choice = menu())!=0);
 		
