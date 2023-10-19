@@ -9,9 +9,6 @@ public class ListOfStringTest {
 		list.add("Sunbeam karad");
 		list.add("Sunbeam Infotech");
 
-		
-	
-		
 		class FindHighestLength implements Comparator<String>
 		{
 			public int compare(String s1,String s2)
@@ -22,9 +19,7 @@ public class ListOfStringTest {
 		}
 		FindHighestLength comparator = new FindHighestLength();
 		String max = Collections.max(list,comparator);
-	
-		System.out.println("Highest Length String = "+max);
-		
+		System.out.println("Highest Length String = "+"["+max+"]");
 	}
 
 }

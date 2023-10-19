@@ -10,13 +10,14 @@ public class CollectionNullCheck {
 		//Collection<String> c = new LinkedHashSet<>();
 		//Collection<String> c = new TreeSet<>();
 		c.add("B");
-		c.add("D");
 		c.add("A");
-		c.add("C");
+		c.add("D");
+		c.add("E");
 		c.add(null);
 		c.add(null);
 		c.add(null);
 		System.out.println(c.toString());
+		System.out.println(c.size());
 
 	}
 

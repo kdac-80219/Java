@@ -18,7 +18,6 @@ public class TestEmployeeLinkedList {
 			System.out.println("4 .Delete Employee");
 			System.out.println("5 .Sort Employee");
 			System.out.println("6 .Edit/Update Employee");
-			//System.out.println("7 .Sort all books by price in desc order -- list.sort();");
 			System.out.println("**************************************************************");
 
 			System.out.println("Enter Your Choice = ");
