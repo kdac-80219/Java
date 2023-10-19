@@ -45,8 +45,7 @@ public class Student {
 		System.out.println("Enter Roll Number = ");
 		this.roll = sc.nextInt();
 		System.out.println("Enter Name = ");
-		this.name = sc.nextLine();
-		sc.nextLine();
+		this.name = sc.next();
 		System.out.println("Enter City = ");
 		this.city = sc.next();
 		System.out.println("Enter Marks = ");
