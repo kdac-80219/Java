@@ -16,6 +16,9 @@ public class Users {
 	public Users() {
 		super();
 	}
+	public Users(int id) {
+		this.id = id;
+	}
 	public Users(int id, String firstName, String lastName, String email, String passwd, String dob, boolean status,
 			String role) {
 		super();
